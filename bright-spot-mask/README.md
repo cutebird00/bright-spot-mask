@@ -12,7 +12,7 @@ A Windows utility that places two adjustable, click-through radial overlays over
 
 ## Quick start / 开始使用
 
-1. Open [Releases](https://github.com/cutebird00/SomeTools/releases) and download `Bright-Spot-Mask-2026.10.07.zip` under **Assets**. Extract it and open the `Bright-Spot-Mask` folder; do not run from inside the ZIP. The repository source is also available via **Code → Download ZIP**, with the app in `bright-spot-mask`.
+1. Open [Releases](https://github.com/cutebird00/bright-spot-mask/releases) and download `Bright-Spot-Mask-2026.10.07.zip` under **Assets**. Extract it and open the `Bright-Spot-Mask` folder; do not run from inside the ZIP. The repository source is also available via **Code → Download ZIP**, with the app in `bright-spot-mask`.
 2. Double-click `start-mask.cmd`. The interface initially uses Simplified Chinese; select **English** beside the master switch if preferred. Click **Monitor / 连接显示器**, choose the display, and select **Use selected display / 绑定所选显示器**. Masks remain hidden until a display is bound.
 3. Move Layer 1 over the bright spot with the arrow buttons, then adjust size, color, brightness, and transparency. Enable Layer 2 if needed.
 
