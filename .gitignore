@@ -1,0 +1,12 @@
+# Local Bright Spot Mask settings and atomic-save backups
+bright-spot-mask/mask-*.json
+bright-spot-mask/mask-*.json.bak
+bright-spot-mask/mask-*.json.tmp
+
+# Local shortcuts and editor/OS files
+*.lnk
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
