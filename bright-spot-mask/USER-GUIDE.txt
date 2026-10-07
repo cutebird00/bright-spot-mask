@@ -1,0 +1,111 @@
+﻿亮斑遮罩 — 简单使用说明 / Bright Spot Mask — Quick User Guide
+
+适用环境
+• Windows 10（2004 或更新版本）/ Windows 11。
+• 支持选择当前连接的显示器。
+
+开始使用
+1. 把 ZIP 完整解压到一个普通文件夹，不要直接在压缩包中运行。
+2. 双击 start-mask.cmd。点击窗口右上方“连接显示器”，在列表中选择自己的屏幕，
+   再点击“绑定所选显示器”。列表显示型号、分辨率和主屏标记；可点“刷新”重新检测。
+   首次运行会自动配置后台连接检测，以后连接绑定屏幕时自动启动。
+3. 首次运行需先绑定显示器；默认遮罩中心为黑色、10% 不透明度，边缘透明。未附带原用户设置。
+4. 选“第一层遮罩”或“第二层遮罩”，分别调节其参数。第二层默认关闭。
+5. 用方向按钮把遮罩移到自己的亮斑位置：单击移动 5 像素，长按会逐渐加速。
+
+主要选项
+• 总开关旁可选择简体中文、繁體中文或 English，切换立即生效，并记住选择。
+• 每个渐变点分别设置原色 RGB、亮度和透明度。
+• “总开关”统一控制两层；“随背景亮度”使白底强度最大、纯黑背景强度为 0。
+• 档位 1 / 2 / 3 分别自动保存全部设置，切档前也会自动保存当前档。
+• 显示器绑定由三个档位共享，不会因切换档位而改变。
+  初次绑定另一台屏幕时遮罩放在屏幕中央；各屏幕的两层位置分别记忆，切回时恢复。绑定屏幕未连接时，遮罩会隐藏，连接后恢复。
+
+保存与退出
+• 程序会在解压目录生成 mask-settings.json、mask-presets.json 及备份文件。
+  手动绑定显示器后还会生成 mask-display-binding.json，保存绑定和各屏幕位置。
+  mask-language.json 单独保存界面语言，由所有档位共用。
+  这些文件只包含本机使用者自己的新设置。请放在可写的普通文件夹中。
+• “收起到托盘”会隐藏调节窗口。双击任务栏托盘图标或再次启动程序可重新打开。
+• “退出”会关闭遮罩。调节窗口本身不持续置顶，遮罩窗口会维护置顶。
+• Windows 锁屏和 UAC 安全桌面不能由普通遮罩覆盖。
+
+Windows 登录后会静默检测；接上绑定屏幕时自动启动遮罩，调节窗口不会自动弹出。
+   登录时屏幕已经连接，也会自动启动。在软件中更换绑定后，检测会跟随新选择。
+请保留解压后的文件夹。移动文件夹后，手动从新位置运行一次，以更新启动路径。
+要删除软件，先退出遮罩，在任务管理器中结束命令行含 watch-display.ps1 的
+   PowerShell 检测进程。按 Win+R 输入 shell:startup，删除
+   “亮斑遮罩 - 显示器连接自动启动”快捷方式，再删除软件文件夹。
+
+watch-display.ps1 是随包提供的连接检测程序，检测所绑定的屏幕。
+
+请把本包所有程序文件放在同一个文件夹，使用 start-mask.cmd 启动。
+
+============================================================
+English Version
+Bright Spot Mask — Quick User Guide
+
+System Requirements
+• Windows 10 (version 2004 or later) or Windows 11.
+• You can choose any currently connected display.
+
+Getting Started
+1. Extract the entire ZIP into a regular folder. Do not run the app from inside the ZIP.
+2. Double-click start-mask.cmd. Click “Monitor” in the upper-right corner,
+   select your screen from the list, and click “Use selected display”.
+   The list shows the model, resolution, and primary-display indicator.
+   Click “Refresh” to detect displays again.
+   The first run automatically sets up background connection detection.
+   The mask will subsequently start when the bound screen is connected.
+3. Bind a display before the masks appear. The default mask has a black
+   center at 10% opacity and transparent edges. Personal settings are not included.
+4. Choose “Layer 1” or “Layer 2” to adjust each mask independently.
+   Layer 2 is off by default.
+5. Use the arrow buttons to move the mask over your screen's bright spot.
+   A click moves it by 5 pixels; holding a button moves it continuously
+   and gradually increases the speed.
+
+Main Controls
+• The language list beside the master switch offers Simplified Chinese,
+  Traditional Chinese, and English. Changes take effect immediately
+  and your choice is remembered.
+• Each gradient point has separate RGB color, brightness, and transparency controls.
+• “Master switch” controls both layers. “Adapt to background” gives the mask
+  its maximum configured strength on white and zero strength on pure black.
+• Profiles 1, 2, and 3 automatically save their settings. The current profile
+  is also saved before switching.
+• The monitor binding is shared by all profiles and stays the same when
+  switching profiles. When you first bind a different screen, the masks are
+  placed at its center. Each screen's two-layer positions are remembered
+  separately and restored when you switch back. The masks are hidden while
+  the bound screen is disconnected and return when it reconnects.
+
+Saving and Exiting
+• The app creates mask-settings.json, mask-presets.json, and backup files
+  in the extracted folder. After a manual monitor binding, it also creates
+  mask-display-binding.json to save the binding and per-screen positions.
+  mask-language.json saves the interface language separately for all profiles.
+  These files contain the new user's own settings. Keep the app in a regular,
+  writable folder.
+• “Hide to tray” hides the settings window. Double-click the system-tray icon
+  or run the app again to reopen it.
+• “Exit” closes the masks. The settings window does not stay above other
+  windows; the mask windows maintain their topmost position.
+• Ordinary mask windows cannot cover the Windows lock screen or UAC secure desktop.
+
+Detection runs quietly after Windows sign-in. Connecting the bound screen
+starts the masks without opening the settings window. If the screen is already
+connected when you sign in, the masks also start automatically. Choosing
+another display in the app updates the detection target.
+
+Keep the extracted folder. If you move it, manually run the app from its
+new location once to update the startup path.
+
+To remove the app, first exit the masks. In Task Manager, end the PowerShell
+detection process whose command line contains watch-display.ps1.
+Press Win+R, enter shell:startup, and delete the shortcut. Then delete the app folder.
+
+watch-display.ps1 is the connection watcher for whichever screen you bind.
+
+Keep all program files from this package together in the same folder,
+and use start-mask.cmd to launch the app.
